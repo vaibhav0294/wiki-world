@@ -1,0 +1,99 @@
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
+  <a class="navbar-brand" [routerLink] = "['/home']">WorldStats</a>
+  <button class="navbar-toggler" style="color:white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink] = "['/home']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown" style="padding-right: 20px">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Regions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink] = "['/countries','africa']">Africa</a>
+          <a class="dropdown-item" [routerLink] = "['/countries','americas']">America</a>
+          <a class="dropdown-item" [routerLink] = "['/countries','asia']">Asia</a>
+          <a class="dropdown-item" [routerLink] = "['/countries','europe']">Europe</a>
+          <a class="dropdown-item" [routerLink] = "['/countries','oceania']">Oceania</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" style="padding-right: 20px">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Search By
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click) = "setSearchType('name')">Country Name</a>
+            <a class="dropdown-item" (click) = "setSearchType('lang')">Language Code</a>
+            <a class="dropdown-item" (click) = "setSearchType('currency')">Currency Code</a>
+          </div>
+        </li>
+        
+
+      </ul>
+    <form class="form-inline my-2 my-lg-0 ">
+      <input class="form-control mr-sm-2 " style="width : 250px" type="search" [placeholder]="searchPlaceHolder" aria-label="Search" [(ngModel)] = "searchText" [ngModelOptions] = "{standalone:true}"> 
+    </form>
+  </div>
+</nav>
+
+
+
+
+</div>
+<router-outlet></router-outlet>
+
+
+  <!-- Footer -->
+
+<div class="py-5 bg-light" style="margin-top : 50px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Bootstrap 101</h5>
+          <ul class="contact-info list-unstyled">
+            <li><a href="mailto:sales@landy.com" class="text-dark">hello@bootstrap101.com</a></li>
+            <li><a href="tel:123456789" class="text-dark">+00 123 456 789</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5>Pages</h5>
+          <ul class="links list-unstyled">
+            <li> <a class="text-muted">Home</a></li>
+            <li> <a class="text-muted">Asia</a></li>
+            <li> <a class="text-muted">Africa</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5>Favourites</h5>
+          <ul class="links list-unstyled">
+            <li> <a class="text-muted">America</a></li>
+            <li> <a class="text-muted">Europe</a></li>
+            <li> <a class="text-muted">Oceania</a></li>
+            <li> <a class="text-muted">Everese</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-center text-md-left">
+          <p class="mb-md-0">&copy;All rights reserved. </p>
+        </div>
+        <div class="col-md-5 text-center text-md-right">
+          <p class="mb-0">Template By <a href="https://bootstrapious.com/" class="external text-white">Vaibhav D C</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

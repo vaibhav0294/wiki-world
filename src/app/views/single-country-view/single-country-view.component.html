@@ -1,0 +1,67 @@
+<div class="seacrcTemplate" style="margin-top:100px" *ngIf="searchText!=''">
+    <app-search-results></app-search-results>
+  </div>
+  
+
+<div class="container" style="margin-top : 100px; margin-bottom: 50px" *ngIf="searchText==''">
+
+    <div style="text-align: center">
+  
+      <div class="row">
+  
+        <div class="col-12" style="padding: 10px;" >
+  
+          <div class="tile" *ngIf="country" >
+  
+            <div class="header" >{{country[0].name}}</div>
+  
+              <div class="banner-img">
+                <img src="{{country[0].flag}}" alt="Image {{country[0].name}} Flag" style="height: 200px;width: 50%">
+              </div>
+  
+              <div class="dates">
+  
+                <div class="start" style="border-right:1px solid #ebeff2">
+                  <strong>CAPITAL</strong> {{country[0].capital}}
+                  <span></span>
+                </div>
+                <div class="ends">
+                  <strong>TIMEZONE</strong> {{country[0].timezones}}
+                </div>
+              </div>
+  
+              <div class="stats" >
+                <div style="border-right:1px solid #ebeff2">
+                  <strong>Region</strong> {{country[0].region}}
+                </div>
+  
+                <div>
+                  <strong>Subregion</strong> {{country[0].subregion}}
+                </div>
+  
+              </div>
+  
+              <div class="stats">
+  
+                <div style="border-right:1px solid #ebeff2">
+                  <!-- <strong>Population</strong> {{country.population}} -->
+                </div>
+  
+                <div>
+                  <!-- <strong>Area</strong> {{country.area}} -->
+
+                </div>
+              </div>
+  
+              
+              <div class="footer" style="text-align: center">
+                <a  class="Cbtn Cbtn-danger" (click)="goBackToPreviousPage()">Back</a>
+              </div>
+            </div>
+        </div>
+  
+      </div>
+    </div> 
+    
+  </div>
+
